@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Removed explicit body font-family to allow Tailwind to apply it via font-sans from layout.tsx */
+
+@layer base {
+  :root {
+    --background: 220 100% 98%; /* White Smoke #F5F9FF */
+    --foreground: 224 20% 25%; /* Darker Gray for text */
+
+    --card: 220 100% 99%; /* Slightly tinted White Smoke for cards */
+    --card-foreground: 224 20% 25%; /* Darker Gray for card text */
+
+    --popover: 220 100% 99%;
+    --popover-foreground: 224 20% 25%;
+
+    --primary: 230 70% 11%; /* Deep Space Blue #0A0F2C */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 220 25% 92%; /* Lighter gray */
+    --secondary-foreground: 230 70% 11%; /* Deep Space Blue */
+
+    --muted: 220 20% 88%;
+    --muted-foreground: 224 15% 45%; /* Muted text color */
+
+    --accent: 179 100% 50%; /* Icy Cyan #00FFF7 */
+    --accent-foreground: 230 70% 11%; /* Deep Space Blue text on Icy Cyan */
+
+    --destructive: 2 100% 71%; /* Futuristic Coral #FF6E6A */
+    --destructive-foreground: 0 0% 100%; /* White */
+    
+    --success: 100 100% 78%; /* Aqua Lime #B0FF92 */
+    --success-foreground: 224 20% 25%; /* Dark text on Aqua Lime */
+
+    --border: 220 20% 85%;
+    --input: 220 30% 95%;
+    --ring: 179 100% 50%; /* Icy Cyan for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors - using primary for navbar/footer consistency */
+    --sidebar-background: 230 70% 11%; /* Deep Space Blue */
+    --sidebar-foreground: 0 0% 100%; /* White */
+    --sidebar-primary: 179 100% 50%; /* Icy Cyan for active/hover items in sidebar context */
+    --sidebar-primary-foreground: 230 70% 11%; /* Deep Space Blue text for Icy Cyan */
+    --sidebar-accent: 230 70% 15%; /* Slightly lighter Deep Space Blue for hover */
+    --sidebar-accent-foreground: 0 0% 100%; /* White */
+    --sidebar-border: 230 70% 20%;
+    --sidebar-ring: 179 100% 50%;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 230 70% 11%; /* Deep Space Blue */
+    --foreground: 0 0% 100%; /* White */
+
+    --card: 230 70% 15%; /* Slightly Lighter Deep Space Blue */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 230 70% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 179 100% 50%; /* Icy Cyan */
+    --primary-foreground: 230 70% 11%; /* Deep Space Blue */
+    
+    --secondary: 230 70% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 70% 25%;
+    --muted-foreground: 220 20% 88%;
+
+    --accent: 157 100% 62%; /* Neon Mint */
+    --accent-foreground: 230 70% 11%; /* Deep Space Blue */
+
+    --destructive: 2 100% 71%; /* Futuristic Coral */
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 100 100% 78%; /* Aqua Lime */
+    --success-foreground: 224 20% 25%;
+
+    --border: 230 70% 20%;
+    --input: 230 70% 20%;
+    --ring: 157 100% 62%; /* Neon Mint */
+
+    /* Sidebar specific colors for dark mode */
+    --sidebar-background: 230 70% 9%; /* Darker Deep Space Blue */
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 179 100% 50%;
+    --sidebar-primary-foreground: 230 70% 11%;
+    --sidebar-accent: 230 70% 13%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 70% 15%;
+    --sidebar-ring: 157 100% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-neon-mint-hover {
+    @apply hover:bg-[hsl(157,100%,62%)] hover:text-[hsl(230,70%,11%)];
+  }
+}
