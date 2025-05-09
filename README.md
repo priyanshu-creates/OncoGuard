@@ -18,7 +18,7 @@ A powerful web-based solution for predicting the likelihood of breast cancer mal
 
 ## 🚀 Live Demo
 
-🔗 [View Live Demo](#) *(https://onco-guard.vercel.app/)*
+🔗(https://onco-guard.vercel.app/)
 
 ---
 
